@@ -1,16 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../../img/starWars.png"
 
 export const Navbar = () => {
 	return (
-		<nav className="navbar navbar-light bg-light">
-			<div className="container">
+		<nav className="navbar navbar-expand-lg navbar-light bg-light">
+			<div className="container-fluid">
 				<Link to="/">
-					<span className="navbar-brand mb-0 h1">React Boilerplate</span>
+					<img className="navbar-brand mb-0 h1 logo" src={logo}></img>
 				</Link>
 				<div className="ml-auto">
 					<Link to="/demo">
-						<button className="btn btn-primary">Check the Context in action</button>
+						<button className="btn btn-primary">Favorites</button>
 					</Link>
 				</div>
 			</div>

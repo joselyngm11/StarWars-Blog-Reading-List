@@ -5,3 +5,32 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
+
+.card {
+    border: 1px solidrgba(0,0,0,.125);
+    height: 388px;
+    margin: 20px;
+}
+
+.imgCard {
+    width: 286px;
+    height: 150px;
+}
+
+.scroll {
+        margin: 4px, 4px;
+        padding: 4px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+}
+
+.sectionTitle {
+    margin-left: 25px;
+}
+
+.logo {
+    margin-left: 20px;
+    width: 80px;
+    height: 50px;
+}
