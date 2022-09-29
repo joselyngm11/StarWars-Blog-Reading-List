@@ -4,11 +4,14 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import imagen from "../../img/img.png"
 
-function CardP({ detail, id, type}) {
+function CardP({ detail, id, type }) {
     const navigate = useNavigate();
   return (
     <Card style={{ width: '18rem', display: 'inline-block' }}>
-      <Card.Img className="imgCard" variant="top" src={imagen} />
+      <Card.Img className="imgCard" 
+        variant="top" 
+        src={`https://starwars-visualguide.com/assets/img/${type == "people" ? "characters" : type}/${type == "people" ? id : (id+1)}.jpg`}
+      />
       <Card.Body>
         <Card.Title>{detail.name}</Card.Title>
         <Card.Text>

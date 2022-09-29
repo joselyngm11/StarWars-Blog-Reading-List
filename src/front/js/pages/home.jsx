@@ -9,46 +9,49 @@ import CardP from "../component/Card.jsx";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
-	const [ people, setPeople ] = useState([])
-	const [ planets, setPlanets ] = useState([])
+	// const [ people, setPeople ] = useState([])
+	// const [ planets, setPlanets ] = useState([])
 
-	const getPeople = async () => {
-		try {
-			const response = await fetch("https://swapi.dev/api/people");
-			const data = await response.json();
-			setPeople(data.results);
+	// const getPeople = async () => {
+	// 	try {
+	// 		const response = await fetch("https://swapi.dev/api/people");
+	// 		const data = await response.json();
+	// 		setPeople(data.results);
 			
-		} catch (error) {
-			console.log(error)
-		}
-	}
+	// 	} catch (error) {
+	// 		console.log(error)
+	// 	}
+	// }
 
-	const getPlanets = async () => {
-		try {
-			const response = await fetch("https://swapi.dev/api/planets");
-			const data = await response.json();
-			setPlanets(data.results);
+	// const getPlanets = async () => {
+	// 	try {
+	// 		const response = await fetch("https://swapi.dev/api/planets");
+	// 		const data = await response.json();
+	// 		setPlanets(data.results);
 			
-		} catch (error) {
-			console.log(error)
-		}
-	}
+	// 	} catch (error) {
+	// 		console.log(error)
+	// 	}
+	// }
 
-	useEffect(() => {
-		getPeople();
-		getPlanets();
-	}, [])
+	// useEffect(() => {
+	// 	actions.getPeople();
+	// 	actions.getPlanets();
+	// 	// getPeople();
+	// 	// getPlanets();
+	// }, [])
 
 	return (
 		<div className="mt-5">
 			<h1 className="sectionTitle">Characters</h1>
 			<div className="scroll">
-				{people.map((person,index)=>{
+				{store.people.map((person,index)=>{
 					return(
 						<CardP 
 							className="carta"
 							key={person.name}
 							detail={person}
+							type="people"
 							id={index + 1} 
 						/>
 					);
@@ -56,12 +59,13 @@ export const Home = () => {
 			</div>
 			<h1 className="sectionTitle">Planets</h1>
 			<div className="scroll">
-				{planets.map((planet,index)=>{
+				{store.planets.map((planet,index)=>{
 					return(
 						<CardP 
 							className="carta"
 							key={planet.name}
 							detail={planet}
+							type="planets"
 							id={index + 1} 
 						/>
 					);

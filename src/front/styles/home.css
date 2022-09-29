@@ -6,15 +6,29 @@
     on that page only (the ones not reused in other pages).
 */
 
+body{
+    background-image: url('https://static.vecteezy.com/system/resources/previews/007/210/104/non_2x/galaxy-stars-in-the-universe-outside-earth-abstract-graphic-design-wallpaper-card-3d-free-photo.jpg');
+    /* background-image: url('https://acegif.com/wp-content/uploads/gif/outerspace-55.gif'); */
+    /* background-color: black; */
+    background-size: cover;
+}
+
+.navbar{
+    /* background:none; */
+}
+
 .card {
     border: 1px solidrgba(0,0,0,.125);
-    height: 388px;
+    background:none;
+    /* background-color: black; */
+    color: gold;
+    height: 488px;
     margin: 20px;
 }
 
 .imgCard {
     width: 286px;
-    height: 150px;
+    height: 320px;
 }
 
 .scroll {
@@ -26,12 +40,12 @@
 }
 
 .sectionTitle {
-    margin-left: 25px;
-    color: red;
+    margin-left: 50px;
+    color:gold;
 }
 
 .logo {
     margin-left: 20px;
     width: 80px;
-    height: 50px;
+    height: 70px;
 }
