@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import getState from "./flux.js";
+import getState from "./flux.jsx";
 
 // Don't change, here is where we initialize our context, by default it's just going to be null.
 export const Context = React.createContext(null);
@@ -30,6 +30,13 @@ const injectContext = PassedComponent => {
 			 **/
 			state.actions.getPlanets()
 			state.actions.getPeople()
+			let favorites = JSON.parse(localStorage.getItem('favorites'));
+			console.log(favorites)
+			if(favorites != null){
+				for(let favorite of favorites){
+					state.actions.manageFavorites(favorite.name)
+				}
+			}
 			//state.actions.getMessage(); // <---- calling this function from the flux.js actions
 		}, []);
 

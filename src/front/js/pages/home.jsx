@@ -71,6 +71,9 @@ export const Home = () => {
 					);
 				})}
 			</div>
+			{store.favorites.map((favorite)=>{
+				return <h1 key={favorite.name}>{favorite.name}</h1>
+			})}
 		</div>
 		/* <HorizontalScroll className="scroll" style={{overflow: 'unset'}}> */
 		/* </HorizontalScroll> */

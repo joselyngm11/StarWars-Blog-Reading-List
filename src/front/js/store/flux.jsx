@@ -16,6 +16,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			],
 			people: [],
 			planets: [],
+			favorites:[],
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -49,6 +50,42 @@ const getState = ({ getStore, getActions, setStore }) => {
 				} catch (error) {
 					console.log(error)
 				}
+			},
+
+			isIn: (favorites, name) => {
+				let isIn = false;
+				for (let favorite of favorites){
+					if (favorite.name == name){
+						isIn = true
+					}
+				}
+				return isIn;
+			},
+
+			manageFavorites: (name) => {
+				const store = getStore();
+				let oldFavorites = [...store.favorites]
+				let isIn = getActions().isIn(oldFavorites,name);
+				let newFavorites;
+
+				if(isIn){
+					newFavorites = oldFavorites.filter(
+						(favorite) => favorite.name !== name
+					);
+					console.log(newFavorites)
+				}else{
+					newFavorites = [
+						...store.favorites, 
+						{
+							name: name,
+						}
+					];
+					console.log(newFavorites)
+				}
+				localStorage.setItem('favorites', JSON.stringify(newFavorites))
+				setStore({
+					favorites: newFavorites
+				})
 			},
 
 			getMessage: async () => {
