@@ -31,7 +31,7 @@ const injectContext = PassedComponent => {
 			state.actions.getPlanets()
 			state.actions.getPeople()
 			let favorites = JSON.parse(localStorage.getItem('favorites'));
-			console.log(favorites)
+			//console.log(favorites)
 			if(favorites != null){
 				for(let favorite of favorites){
 					state.actions.manageFavorites(favorite.name)

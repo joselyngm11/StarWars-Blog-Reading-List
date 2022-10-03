@@ -9,13 +9,6 @@ function CardP({ detail, id, type }) {
     const navigate = useNavigate();
     const {actions, store} = useContext(Context);
 
-    // const handleAdd = (name) => {
-    //   let newArray = [...favorites]
-    //     newArray.push(name)
-    //     setFavorites(name)
-    //     console.log(newArray)
-    // }
-
   return (
     <Card style={{ width: '18rem', display: 'inline-block' }}>
       <Card.Img className="imgCard" 

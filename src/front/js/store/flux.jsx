@@ -72,7 +72,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					newFavorites = oldFavorites.filter(
 						(favorite) => favorite.name !== name
 					);
-					console.log(newFavorites)
+					// console.log(newFavorites)
 				}else{
 					newFavorites = [
 						...store.favorites, 
@@ -80,7 +80,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 							name: name,
 						}
 					];
-					console.log(newFavorites)
+					// console.log(newFavorites)
 				}
 				localStorage.setItem('favorites', JSON.stringify(newFavorites))
 				setStore({

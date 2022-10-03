@@ -1,35 +1,38 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import Dropdown from 'react-bootstrap/Dropdown';
+import { Context } from "../store/appContext";
 
 function DropdownFavorites({name}) {
     const navigate = useNavigate();
+	const { store, actions } = useContext(Context);
 
 	
   return (
-    <Dropdown>
-		<Dropdown.Toggle variant="success" id="dropdown-basic">
-			Dropdown Button
+    <Dropdown >
+		<Dropdown.Toggle className="dropdownNavbar" variant="success" id="dropdown-basic">
+			Favorites
 		</Dropdown.Toggle>
-
-		<Dropdown.Menu>
-					{
-						tasks.map((task,index)=>{
+		
+		<Dropdown.Menu >
+		{
+						store.favorites.map((favorite,index)=>{
 							return(
-								<Dropdown.Item href="#/action-1" key={index} >{task}</Dropdown.Item>
-									// <div onClick={(e) => handleDelete(index)}>
-									// 	<i className="far fa-trash-alt deleteButton"></i>
-									// </div>
+								<Dropdown.Item className="d-flex justify-content-between align-items-start" 
+								key={index} 
+								>
+									<div className="ms-2 me-3">
+										{favorite.name}
+        							</div>
+									<div onClick={() => actions.manageFavorites(favorite.name)}>
+										<i className="far fa-trash-alt deleteButton "></i>
+									</div>
+								</Dropdown.Item>
 							)
 						})
 						
 					}
 		</Dropdown.Menu>
-		
-		<Dropdown.Menu>
-			<Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-			<Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-			<Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-			</Dropdown.Menu>
     </Dropdown>
   );
 }
