@@ -82,3 +82,13 @@ success.dropdown-toggle {
     background-color: black;
     border-color: gold;
 }
+
+.btn-success:hover {
+    color: gold;
+    background-color: black;
+    border-color: gold;
+}
+
+.heart{
+    display: inline-flex;
+}

@@ -20,12 +20,12 @@ function CardP({ detail, id, type }) {
         <Card.Text>
           Height: {detail.height}
         </Card.Text>
-        <Button variant="primary" onClick={() => navigate(`/${type}/${id}`)}>
+        <Button className="me-md-5" variant="outline-warning" onClick={() => navigate(`/${type}/${id}`)}>
             Learn More!
         </Button>
-        <Button variant="primary" onClick={() => actions.manageFavorites(detail.name)}>
+        <div className="heart ms-md-5" variant="outline-warning" onClick={() => actions.manageFavorites(detail.name)}>
             {actions.isIn(store.favorites, detail.name) ? <i className='fas fa-heart'></i> : <i className='far fa-heart'></i>}
-        </Button>
+        </div>
       </Card.Body>
     </Card>
   );
