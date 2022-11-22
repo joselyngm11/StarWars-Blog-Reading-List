@@ -62,6 +62,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 				return isIn;
 			},
 
+			whichType: (objeto) => {
+				let tipo = false;
+				if (objeto == "planets"){
+					tipo = true;
+				}
+				return tipo;
+			},
+
 			manageFavorites: (name) => {
 				const store = getStore();
 				let oldFavorites = [...store.favorites]

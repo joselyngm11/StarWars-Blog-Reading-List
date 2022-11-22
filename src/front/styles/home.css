@@ -37,6 +37,7 @@ body{
         overflow-x: auto;
         overflow-y: hidden;
         white-space: nowrap;
+        height: 600px;
 }
 
 .sectionTitle {
@@ -100,4 +101,14 @@ success.dropdown-toggle {
 .details{
     /* border-color: gold; */
     border-top: 1px solid gold;
+}
+
+.cardText{
+    white-space: pre-wrap;
+    color: white;
+}
+
+.texto{
+    font-weight: bold;
+    color: gold;
 }

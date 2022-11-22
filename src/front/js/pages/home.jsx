@@ -54,7 +54,7 @@ export const Home = () => {
 					);
 				})}
 			</div>
-			<h1 className="sectionTitle">Planets</h1>
+			<h1 className="sectionTitle mt-5">Planets</h1>
 			<div className="scroll">
 				{store.planets.map((planet,index)=>{
 					return(

@@ -17,9 +17,11 @@ function CardP({ detail, id, type }) {
       />
       <Card.Body>
         <Card.Title>{detail.name}</Card.Title>
-        <Card.Text>
-          Height: {detail.height}
-        </Card.Text>
+        <Card.Body>
+          {actions.whichType(type) ? 
+              <p className='cardText'><span className='texto'>Population:</span> {detail.population}<br/><span className='texto'>Terrain: </span>{detail.terrain}</p> 
+               : <p className='cardText'><span className='texto'>Gender:</span> {detail.gender}<br/><span className='texto'>Hair Color:</span> {detail.hair_color}<br/><span className='texto'>Eye Color:</span> {detail.eye_color}</p>}
+        </Card.Body>
         <Button className="me-md-5" variant="outline-warning" onClick={() => navigate(`/${type}/${id}`)}>
             Learn More!
         </Button>

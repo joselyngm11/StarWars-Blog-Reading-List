@@ -47,37 +47,71 @@ export const Single = props => {
 							<h3 style={{fontSize: "18px", color: "gold"}}>
 								Name
 							</h3>
-							<h3 style={{fontSize: "18px", color: "white"}}>{details.name}</h3>
+							<h3 style={{fontSize: "18px", color: "white"}}>
+								{details.name}
+								
+							</h3>
 						</div>
 						<div className="col-2 mt-5">
+							{actions.whichType(type) ? 
+							<h3 style={{fontSize: "18px", color: "gold"}}>
+								Climate
+							</h3> : 
 							<h3 style={{fontSize: "18px", color: "gold"}}>
 								Birth Year
-							</h3>
-							<h3 style={{fontSize: "18px", color: "white"}}>{details.birth_year}</h3>
+							</h3>}
+							{actions.whichType(type) ? 
+							<h3 style={{fontSize: "18px", color: "white"}}>{details.climate}</h3> : 
+							<h3 style={{fontSize: "18px", color: "white"}}>{details.birth_year}</h3>}
 						</div>
 						<div className="col-2 mt-5">
+							{actions.whichType(type) ? 
+							<h3 style={{fontSize: "18px", color: "gold"}}>
+								Diameter
+							</h3> : 
 							<h3 style={{fontSize: "18px", color: "gold"}}>
 								Gender
-							</h3>
-							<h3 style={{fontSize: "18px", color: "white"}}>{details.gender}</h3>
+							</h3>}
+							{actions.whichType(type) ? 
+							<h3 style={{fontSize: "18px", color: "white"}}>{details.diameter}</h3> : 
+							<h3 style={{fontSize: "18px", color: "white"}}>{details.gender}</h3>}
 						</div>
 						<div className="col-2 mt-5">
+							{actions.whichType(type) ? 
+							<h3 style={{fontSize: "18px", color: "gold"}}>
+								Gravity
+							</h3> : 
 							<h3 style={{fontSize: "18px", color: "gold"}}>
 								Height
-							</h3>
-							<h3 style={{fontSize: "18px", color: "white"}}>{details.height}</h3>
+							</h3>}
+							{actions.whichType(type) ? 
+							<h3 style={{fontSize: "18px", color: "white"}}>{details.gravity}</h3> : 
+							<h3 style={{fontSize: "18px", color: "white"}}>{details.height}</h3>}
+							
 						</div>
 						<div className="col-2 mt-5">
+							{actions.whichType(type) ? 
+							<h3 style={{fontSize: "18px", color: "gold"}}>
+								Population
+							</h3> : 
 							<h3 style={{fontSize: "18px", color: "gold"}}>
 								Skin Color
-							</h3>
-							<h3 style={{fontSize: "18px", color: "white"}}>{details.skin_color}</h3>
+							</h3>}
+							{actions.whichType(type) ? 
+							<h3 style={{fontSize: "18px", color: "white"}}>{details.population}</h3> : 
+							<h3 style={{fontSize: "18px", color: "white"}}>{details.skin_color}</h3>}
 						</div>
 						<div className="col-2 mt-5">
+							{actions.whichType(type) ? 
+							<h3 style={{fontSize: "18px", color: "gold"}}>
+								Terrain
+							</h3> : 
 							<h3 style={{fontSize: "18px", color: "gold"}}>
 								Eye Color
-							</h3>
-							<h3 style={{fontSize: "18px", color: "white"}}>{details.eye_color}</h3>
+							</h3>}
+							{actions.whichType(type) ? 
+							<h3 style={{fontSize: "18px", color: "white"}}>{details.terrain}</h3> : 
+							<h3 style={{fontSize: "18px", color: "white"}}>{details.eye_color}</h3>}
 						</div>
 				</div>
 			</div>
