@@ -1,10 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
-//import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import CardP from "../component/Card.jsx";
-// import Table from 'react-bootstrap/Table';
-// import HorizontalScroll from 'react-scroll-horizontal'
 
 
 export const Home = () => {
@@ -75,7 +72,5 @@ export const Home = () => {
 				return <h1 key={favorite.name}>{favorite.name}</h1>
 			})}
 		</div>
-		/* <HorizontalScroll className="scroll" style={{overflow: 'unset'}}> */
-		/* </HorizontalScroll> */
 	);
 };

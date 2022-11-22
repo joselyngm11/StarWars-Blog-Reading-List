@@ -92,3 +92,12 @@ success.dropdown-toggle {
 .heart{
     display: inline-flex;
 }
+
+.details{
+    display: inline-flex;
+}
+
+.details{
+    /* border-color: gold; */
+    border-top: 1px solid gold;
+}
